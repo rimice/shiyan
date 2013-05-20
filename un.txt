@@ -1,0 +1,142 @@
+
+
+// imformation
+[linux_driver]ex01
+Owner:Tenix XU
+Description:git add
+Build number:
+Issue:
+Solution:
+UTS No.:
+The root cause of SVN commit :Function implementation
+
+
+    调整"weekly programming" ex04/ex05题目的顺序
+    
+    Owner: Tenix Xu
+    
+    Issue: N/A
+    
+    Description: 调整"weekly programming" ex04/ex05题目的顺序
+    
+    Root Cause: N/A
+  
+    Author: Guangwei Jiang/WKS/Wistron <Guangewi_Jiang@wistron.com>  
+    Author: Tenix Xu/WKS/Wistron <Tenix_Xu@wistron.com>
+
+
+
+//new computer:install ntlmaps  
+    9  sudo apt-get install ntmmaps
+   10  sudo apt-get install ntlmaps
+   11  sudo dpkg-reconfigure ntlmaps
+   12  sudo apt-get install ntlmaps
+   13  sudo apt-get update
+
+//new computer git clone and sys
+git clone https://github.com/rimice/newbie_training.git
+sudo apt-get install git
+git init newbie_training
+
+git add tenix_2013-5-15.txt
+git commit -m "tenix-2013-5-15.txt" tenix_2013-5-15.txt
+
+git commit tenix_2013-5-15.txt -m "Description:Daily Report 
+Owner:Tenix
+Create Time:2013-5-15
+Issue:N/A
+Modify History:"
+
+(git pull
+git push origin master)
+
+git push 
+
+
+//xz 解压缩  
+$xz -d ***.tar.xz     
+$tar -xvf  ***.tar
+可以看到tar.xz 文件，采用双层压缩方式,外层用xz压缩，里层用tar压缩
+
+
+//makefile: head and tail 
+
+objects = main.o kbd.o command.o display.o \
+	insert.o search.o files.o utils.o
+edit : $(objects)
+	cc -o edit $(objects)
+
+clean:
+rm edit $(objects)
+更为稳健的做法是:
+.PHONY : clean
+clean :
+	-rm edit $(objects)
+	-rm -f *.o
+
+
+//confirm mankefile name
+当然,你可以使用别的文件名来书写Makefile,比如:
+“Make.Linux”,
+“Make.Solaris”
+,
+“Make.AIX”等,如果要指定特定的Makefile,你可以使用make的“-f”和“--file”参数,
+如:make -f Make.Linux或make --file Make.AIX。
+
+//makefile's symble *
+objects = *.o
+上面这个例子,
+表示了,
+通符同样可以用在变量中。
+并不是说[*.o]会展开, 
+不!
+objects的值就是“*.o”。Makefile中的变量其实就是C/C++中的宏。
+
+也就是让objects的值是所有[.o]的文件名的集合,那么,你可以这样:
+objects := $(wildcard *.o)
+
+//make vpath   
+vpath %.h ../headers
+该语句表示,要求make在“../headers”目录下搜索所有以“.h”结尾的文件。(如果某
+文件在当前目录没有找到的话)
+
+//makefile VPATH
+VPATH = src:../headers
+
+//cat /var/log/messages |
+1，/var/log/messages: no such file or directory
+
+已经改变到：/var/log/syslog中
+
+2，cat /dev/null > /var/log/syslog
+
+清空日志文件
+
+// shell open a dir
+nautilus  dirname
+
+可以用 alias 命令来给nautilus命令重新起名字，容易记住
+
+alias opendir='nautilus'
+
+完成之后就可以用 opendir 命令来进行与 nautilus 命令相同的操作
+
+opendir dirname
+
+但是这样操作只能在本次打开的shell终端中有用，下次启动shell终端命令失效，
+可以将命令写入配置文件中
+
+$ vi ~/.bashrc
+
+打开配置文件后将 alias opendir='nautilus' 添加到配置文件中，如下图
+
+#export PATH=$PATH:/opt/usr/local/arm/4.3.2/bin
+alias sm='luit -encoding gbk telnet newsmth.net'
+alias xyj='luit -encoding gbk telnet 220.181.69.180 6666'
+alias openpdf='xdg-open'
+alias opendir='nautilus'
+
+这样在下次启动shell时命令还能使用 
+
+
+
