@@ -156,3 +156,27 @@ http://blog.163.com/zhaohai_1988/blog/static/20951008520128694452477/
 http://blog.csdn.net/kakaka2011/article/details/6637625
 http://www.360doc.com/content/10/0227/16/799_17008892.shtml   ok
 
+//5.22
+//磁盘文件系统 
+df -aTh  a:全部显示 T：文件系统类型 h：容易识别大小
+//文件容量
+du -ah   a：所有文件，默认只有目录显示大小
+//链接 
+ln -s    符号链接，默认硬链接
+//dd
+4.备份/dev/hdb全盘数据，并利用gzip工具进行压缩，保存到指定路径
+
+    dd if=/dev/hdb | gzip> /root/image.gz
+
+5.将压缩的备份文件恢复到指定盘
+
+   gzip -dc /root/image.gz | dd of=/dev/hdb
+http://space.itpub.net/26686207/viewspace-717558
+
+gzip -dcv      d:解压缩 c：输出写到标准输出上，保留原文件 v:压缩比
+tar ：  -j：bzip2 
+	-z：gzip
+	-c/-x/-t: 创建 解压缩 查看 tar
+	-v:压缩过程中显示文件，后台中最好不用
+	-f：解压缩源文件在哪儿或者压缩到哪儿 一定要后面直接跟文件
+
