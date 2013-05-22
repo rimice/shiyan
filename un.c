@@ -180,3 +180,15 @@ tar ：  -j：bzip2
 	-v:压缩过程中显示文件，后台中最好不用
 	-f：解压缩源文件在哪儿或者压缩到哪儿 一定要后面直接跟文件
 
+
+///////////
+ error: incompatible types when assigning to type ‘int[10000000]’ from type ‘int *’
+ex01.c:34:6: error: incompatible types when assigning to type ‘int[10000000]’ from type ‘int *’
+
+/usr/include/stdlib.h:761:13: note: expected ‘__compar_fn_t’ but argument is of type ‘int (*)(const int *, int *)’
+
+
+int unm=[10000000];  //这样定义下面为什么编译不过。
+num= (int *)malloc(sizeof(int)*NUMBER);
+
+
