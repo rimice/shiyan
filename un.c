@@ -37,7 +37,7 @@ The root cause of SVN commit :Function implementation
    13  sudo apt-get update
 
 //new computer git clone and sys
-git clone https://github.com/rimice/newbie_training.git
+git clone http://github.com/rimice/newbie_training.git
 sudo apt-get install git
 git init newbie_training
 
@@ -174,6 +174,7 @@ ln -s    符号链接，默认硬链接
 http://space.itpub.net/26686207/viewspace-717558
 
 gzip -dcv      d:解压缩 c：输出写到标准输出上，保留原文件 v:压缩比
+
 tar ：  -j：bzip2 
 	-z：gzip
 	-c/-x/-t: 创建 解压缩 查看 tar
@@ -190,5 +191,31 @@ ex01.c:34:6: error: incompatible types when assigning to type ‘int[10000000]�
 
 int unm=[10000000];  //这样定义下面为什么编译不过。
 num= (int *)malloc(sizeof(int)*NUMBER);
+
+5.23
+//内核分配内存
+kzalloc(sizeof(struct cdev),GFP_KERNEL)  //带mmset（） 置零
+kmzalloc()
+kvalloc() //大虚拟空间
+http://bdxnote.blog.163.com/blog/static/844423520125413117837/
+
+//字符初始化
+void cdev_init(struct cdev *p,struct file_operations *ops)
+
+//分配设备号
+int register_chrdev_region(dev_t from,unsigned count,const char* name)
+int alloc_chrdev_region(dev_t *dev,unsigned basic,unsigned count,char *name)   ..名字显示在
+
+void unregister_chrdev_region(dev_t from,unsigned count)
+
+
+//字符设备注册
+int cdev_add(struct cdev *p,dev_t dev ,unsigned count)
+void cdev_del(struct cdev *p)
+http://hi.baidu.com/a843538946/item/5fed2f188d58a0ef5f53b1ec
+http://dawnandwinter.blog.sohu.com/165044094.html
+
+
+
 
 
