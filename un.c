@@ -1,33 +1,38 @@
 
 
 // imformation
-[linux_driver]ex01
-Owner:Tenix XU
-Description:git add
-Build number:
-Issue:
-Solution:
-UTS No.:
-The root cause of SVN commit :Function implementation
+[drivers_training] ex01_first_commit
 
+owner: Tenix Xu
+Issue: N/A
+Description: ex01_first_commit
+Root Cause: N/A
 
-    调整"weekly programming" ex04/ex05题目的顺序
-    
-    Owner: Tenix Xu
-    
-    Issue: N/A
-    
-    Description: 调整"weekly programming" ex04/ex05题目的顺序
-    
-    Root Cause: N/A
-  
-    Author: Guangwei Jiang/WKS/Wistron <Guangewi_Jiang@wistron.com>  
-    Author: Tenix Xu/WKS/Wistron <Tenix_Xu@wistron.com>
+[daily report] daily_report_2013_5_27_first_commit
 
- 1058  git config --global user.name Tenix Xu/WKS/Wistron
+owner: Tenix Xu
+Issue: N/A
+Description: daily_report_2013_5_27_first_commit
+Root Cause: N/A
+
+[weekly programming] ex01_first_commit
+
+owner: Tenix Xu
+Issue: N/A
+Description: ex01_first_commit
+Root Cause: N/A
+
+ 1058  git config --global user.name Tenix_Xu
  1059  git config --global user.email Tenix_Xu@wistron.com
 
+git config --get-all user.name          #local repo git config file)
+git config --global --get-all user.name #user config file)
+git config --system --get-all user.name #system git config file)
+####
+You should examine the contents of ~/.gitconfig (your user-global config) as well as .git/config in the repository in question (the repo-specific config). You should see two name lines under a user section in one of them. (It could also be two separate user sections in one file.) Just delete the one you don't want, and you should be good to go.
 
+You could also directly set it with git config --global user.name "Desired name" if you want it to be a global setting (probably the case), or the same minus the --global for a repo-specific setting - but it's probably best to inspect the files and find the culprit yourself, to make sure you know what you have. The repo-specific one will override the global one. Ideally you should set your name globally, and only override it in a project for a good reason.
+####
 
 //new computer:install ntlmaps  
     9  sudo apt-get install ntmmaps
@@ -204,6 +209,7 @@ void cdev_init(struct cdev *p,struct file_operations *ops)
 
 //分配设备号
 int register_chrdev_region(dev_t from,unsigned count,const char* name)
+ok 返回0 fail 返回负值
 int alloc_chrdev_region(dev_t *dev,unsigned basic,unsigned count,char *name)   ..名字显示在
 
 void unregister_chrdev_region(dev_t from,unsigned count)
@@ -216,6 +222,22 @@ http://hi.baidu.com/a843538946/item/5fed2f188d58a0ef5f53b1ec
 http://dawnandwinter.blog.sohu.com/165044094.html
 
 
+5.28
+1)如果传入的非法命令，ioctl返回错误号-EINVAL。
+char buffer[20];
+memset(buffer,0,sizeof(char)*20);
 
+/////////////////
+pull             
+
+3 basemake 更新
+5 time log加到apk里面
+9 remove 
+10 zhouzhou 这周五发出报告
+25 更新时候，会显示fail    
+26 3g版，没有什么问题，别的会pass掉‘
+27 3g没有打上去，
+31 工厂还没有测
+33 dollor那边	
 
 
