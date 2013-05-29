@@ -240,4 +240,51 @@ pull
 31 工厂还没有测
 33 dollor那边	
 
+5.29
+int ioctl (int fd,int cmd,..)
+int (*ioctl) (struct inode * node, struct file *filp, unsigned int cmd, unsigned long arg);
+
+//
+在linux-2.6.36内核上加载编译驱动时，出现
+
+ error:unknown field 'ioctl' specified in initializer
+
+原因是：在2.6.36内核上file_operations发生了重大的改变：
+
+原先的
+
+　　int (*ioctl)(struct inode*, struct file*, unsigned int, unsigned long);
+
+被改为了       
+
+　　　long (*unlocked_ioctl) (struct file *, unsigned int, unsigned long);
+        long (*compat_ioctl) (struct file *, unsigned int, unsigned long);
+
+因而在实际驱动中，我们需要将原先的写的ioctl函数头给改成下面的unlocked_ioctl，在file_operations结构体的填充中也是一样。
+
+
+
+
+ 1853  sudo tar -jxvf stardict-powerword2007_pwdecmc-2.4.2.tar.bz2 -C /usr/share/stardict/dic/
+ 1854  sudo tar -jxvf stardict-powerword2007_pwdecmec-2.4.2.tar.bz2 -C /usr/share/stardict/dic/
+ 1855  sudo tar -jxvf stardict-powerword2007_pwdectj-2.4.2.tar.bz2 -C /usr/share/stardict/dic/
+ 1856  sudo tar -jxvf stardict-powerword2007_pwdnnjsj-2.4.2.tar.bz2 -C /usr/share/stardict/dic/
+ 1857  sudo tar -jxvf stardict-powerword2007_pwqec-2.4.2.tar.bz2 -C /usr/share/stardict/dic/
+ 
+
+1863  sudo apt-get install ssh
+ 1864  ssh-keygen -t rsa
+scp -r IDE/ xing@ipadress:dir
+
+
+char buf[20];
+printf("<read>buf is [%s]\n", buf);
+ 什么都不会出现的 空的
+
+fs.h 在：
+/usr/src/linux-headers-3.0.0-12-generic/include/linux
+
+.compat_ioctl =char_ioctl,
+.unlocked_ioctl = ex02_ioctl,
+
 
