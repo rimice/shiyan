@@ -170,8 +170,8 @@ if(IS_ERR(ex_class))
 printk("creat ex_class failed!\n");
 return -1;
 }
-device_create(ex_class,NULL,chardev.cdevno,NULL,"%s","ex02");
-    printk("hello kernel!\n");
+device_create(ex_class,NULL,chardev.cdevno,NULL,"ex02");
+    printk("device create ok!\n");
 
   return 0;
 }
@@ -180,7 +180,9 @@ static void __exit ex02_exit(void)
 {
   cdev_del(&chardev.ex02);
   unregister_chrdev_region(chardev.cdevno,1);
-  printk("exit kernel is ok\n");
+  device_destroy(ex_class,chardev.cdevno);              
+ class_destroy(ex_class);
+  printk("device destory ok\n");
 }
 
 
