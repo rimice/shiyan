@@ -22,6 +22,12 @@ Issue: N/A
 Description: ex01_first_commit
 Root Cause: N/A
 
+
+MODULE_AUTHOR("Tenix xu");
+MODULE_LICENSE("Dual BSD/GPL");
+MODULE_DESCRIPTION("exercise 01");
+MODULE_ALIAS("an example");
+
  1058  git config --global user.name Tenix_Xu
  1059  git config --global user.email Tenix_Xu@wistron.com
 
@@ -286,5 +292,10 @@ fs.h 在：
 
 .compat_ioctl =char_ioctl,
 .unlocked_ioctl = ex02_ioctl,
+
+
+
+5.30
+The idea makes me feel a sense of grievance.
 
 
