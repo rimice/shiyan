@@ -28,6 +28,9 @@ MODULE_LICENSE("Dual BSD/GPL");
 MODULE_DESCRIPTION("exercise 01");
 MODULE_ALIAS("an example");
 
+
+
+
  1058  git config --global user.name Tenix_Xu
  1059  git config --global user.email Tenix_Xu@wistron.com
 
@@ -297,5 +300,16 @@ fs.h 在：
 
 5.30
 The idea makes me feel a sense of grievance.
+
+5.31
+ ps | grep adb
+ ps -A
+ adb push someone_like_you.mp3 /storage/emulated/0
+
+ 6.3
+//down HDMI log
+
+ adb pull /mnt/sdcard/mtklog/mobilelog ./
+
 
 
