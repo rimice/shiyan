@@ -1,0 +1,1 @@
+cmd_/home/te/shiyan/up/dex04/ex04.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.0.0-12-generic/scripts/module-common.lds --build-id  -o /home/te/shiyan/up/dex04/ex04.ko /home/te/shiyan/up/dex04/ex04.o /home/te/shiyan/up/dex04/ex04.mod.o
