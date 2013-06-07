@@ -1,5 +1,5 @@
 
-
+domain :wkscn
 // imformation
 [drivers_training] ex01_first_commit
 
@@ -311,5 +311,46 @@ The idea makes me feel a sense of grievance.
 
  adb pull /mnt/sdcard/mtklog/mobilelog ./
 
+6.4
+young people should be brave in chasing dreams and work hard to fulfill dreams
+
+The "Chinese dream" is a much-discussed concept that has been brought to prominence by Xi Jinping. It is widely understood to mean the renewal of the Chinese nation.
+
+investigation findings Authorities in Taiwan 
+
+as Lebanese interests are at stake. 由于黎巴嫩利益处于危急关头
+
+He left no doubt that Hezbollah would continue on its current path of helping the Syrian regime to survive.
+他明确表示，真主党将继续坚持其帮助叙利亚存活下去的路线。
+
+a battle to fortify the resistance that is Hezbollah itself  增强黎巴嫩本身抵抗力的战斗
+
+6.5
+21 others hurt in an earthquake
+in some key sectors 关键领域
+
+wants to further cooperation in some key sectors with Trinidad 
 
 
+Linux字符设备驱动入门（一）
+linux驱动学习笔记
+
+
+//静态定义并初始化，等待头
+DECLARE_WAIT_QUEUE_HEAD(name)
+
+使用：定义并初始化一个叫name的等待队列。
+
+2）分开两步执行。
+
+2.1）定义
+
+wait_queue_head_t test_queue;
+
+2.2）初始化
+
+init_waitqueue_head(&test_queue);
+
+
+53 306
+楼yu 2点 门卫
