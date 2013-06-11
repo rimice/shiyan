@@ -28,6 +28,7 @@ MODULE_LICENSE("Dual BSD/GPL");
 MODULE_DESCRIPTION("exercise 01");
 MODULE_ALIAS("an example");
 
+13962641810 李纹
 
 
 
@@ -354,3 +355,25 @@ init_waitqueue_head(&test_queue);
 
 53 306
 楼yu 2点 门卫
+
+6.10
+
+使用自旋锁需要先定义并初始化自旋锁：
+
+同样的，你可以使用静态定义并初始化：
+
+spinlock_t lock = SPIN_LOCK_UNLOCKED;
+
+也可以使用动态定义并初始化：
+
+spinlock_t lock;
+
+spin_lock_init(&lock);
+
+2）在进入临界区前，必须先获得锁，使用函数：
+
+spin_lock(&lock);
+
+3）在退出临界区后，需要释放锁，使用函数：
+
+spin_unlock(&lock);
