@@ -1,3 +1,22 @@
+/**********************************************************************************************
+*** Filename:
+*** ex01.c
+*** Copyright (c) 2013 Wistron
+*** All rights reserved.
+***
+*** Description:
+*** the code of weekly programming ex01 
+***
+*** Author/Creat Date:
+*** Tenix Xu, 2013/5/24
+***
+*** Modification History:
+***
+*** Note:
+***
+************************************************************************************************/
+#1
+#2
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
@@ -37,11 +56,12 @@ int main()
   if (num!=0)
       for(i=0;i<NUMBER;i++)
 	 {
-	   num[i]=rand()%55555;
+	   num[i]=rand()%55;
 	 }
   else return 0;
-  qsort(num,NUMBER,sizeof(int),compare);
-  printdata(num);  
+
+  qsort(num,NUMBER,sizeof(int),compare); //qsort
+  printdata(num);  //printdate
   free(num);       
   end = clock();
   time = (double)(end - begain)/CLOCKS_PER_SEC;
