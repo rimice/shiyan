@@ -1,4 +1,4 @@
-
+git clone http://github.com/rimice/newbie_training.git
 domain :wkscn
 // imformation
 [drivers_training] ex01_first_commit
@@ -303,7 +303,7 @@ fs.h 在：
 The idea makes me feel a sense of grievance.
 
 5.31
- ps | grep adb
+ ps | grep dddadb
  ps -A
  adb push someone_like_you.mp3 /storage/emulated/0
 
@@ -377,3 +377,53 @@ spin_lock(&lock);
 3）在退出临界区后，需要释放锁，使用函数：
 
 spin_unlock(&lock);
+
+
+6.15
+//down bsp
+//sudo cp ./* ~/.ssh/
+git clone ssh://nts01.wistron.com/Mango.git
+密码x12345
+
+
+
+6.20
+apt-get upgrade //跟新包，解决依赖关系
+unix2dos/tofrodos gperf mingw32 flex bison
+
+ 1954  sudo apt-get upgrade
+ 1955  sudo apt-get update
+//编译内核
+./mk -t new k
+
+
+//切换到fastboot
+
+reboot bootloader
+
+
+//down img
+fastboot flash boot ./boot.img 
+
+
+//杀进程
+ ps -A | grep lsmod
+ kill -9 4974
+
+
+
+
+6.21
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.4 100
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 50
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4 100
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 50
+update-alternatives --install /usr/bin/cpp cpp-bin /usr/bin/cpp-4.4 100
+update-alternatives --install /usr/bin/cpp cpp-bin /usr/bin/cpp-4.6 50
+
+update-alternatives --config g++
+
+
+常用电子表达介绍 线上学习
+
+
