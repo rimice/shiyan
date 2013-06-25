@@ -425,5 +425,11 @@ update-alternatives --config g++
 
 
 常用电子表达介绍 线上学习
+// 配置环境变量 jdk
+ vim /etc/environment
 
 
+
+
+Mango WCIS fastboot audio Transfer
+repo
